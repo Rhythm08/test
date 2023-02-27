@@ -17,6 +17,27 @@ ngOnInit(){
   )
 }
 update(id:any,val:any){
-  this.testservice
+ let  projectdata:any;
+  let a:string='';
+  for(let i of this.test_arr){
+    if(i.id==id){
+       a =i.subject
+     i.subject= a.concat(" ",val.value)
+      projectdata = { ...i };
+
+      break;
+    }
+  }
+
+  this.testservice.update(id,projectdata).subscribe(
+    (data)=>{
+      this.testservice.getdata().subscribe(
+        (data)=>{
+          this.test_arr=data;
+          
+        }
+      )
+    }
+  )
 }
 }

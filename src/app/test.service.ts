@@ -9,5 +9,7 @@ export class TestService {
   getdata(){
     return this.httpclient.get(this.url);
   }
-  // update()
+  update(status:any,data:any){
+    return this.httpclient.put(this.url+'/'+status,data);
+  }
 }
