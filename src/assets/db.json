@@ -1,0 +1,18 @@
+{
+    "students":[
+        {
+        "id":1,
+        "name":"Rhythm",
+        "email":"rhythm@gmail.com",
+        "password":"qw2ERTyhe",
+        "subject": "Maths"
+        },
+        {
+         "id":2,   
+        "name":"Rohan",
+        "email":"rohan@gmail.com",
+        "password":"qw22ERTyhe",
+        "subject": "English"
+        }
+    ]
+}
