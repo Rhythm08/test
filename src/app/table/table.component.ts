@@ -8,6 +8,7 @@ import { TestService } from '../test.service';
 export class TableComponent implements OnInit {
   constructor(private testservice:TestService){}
   test_arr:any=[];
+  select:string=''
 ngOnInit(){
   this.testservice.getdata().subscribe(
     (data)=>{
@@ -15,7 +16,7 @@ ngOnInit(){
     }
   )
 }
-update(val:any){
+update(id:any,val:any){
   this.testservice
 }
 }

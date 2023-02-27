@@ -1,5 +1,5 @@
-<div class="container" style="width:800px" >
-    <table class="table" >
+<div class="container" style="width:800px" id="table" >
+    <table class="table"   >
       <thead>
         <tr>
           <th>Name</th>
@@ -9,12 +9,14 @@
 
         </tr>
       </thead>
-      <tbody>
-        <tr  *ngFor="let test of test_arr">
+      <tbody >
+        <tr  *ngFor="let test of test_arr"  [(ngModel)]="select">
           <th scope="row">{{test.name}}</th>
           <td>{{test.email}}</td>
           <td>{{test.password}}</td>
           <td>{{test.subject}}</td>
+          <td>{{test.id}}</td>
+
         
       
         </tr>
@@ -23,7 +25,7 @@
       
     </table>
   </div>
-  <div class="container" >  
-    <input type="text" name="" id="" placeholder="enter subject" >
+  <div class="container" id="table"  >  
+    <input type="text" name="" id="" placeholder="enter subject" [(ngModel)]="select" >
     <button (click)="update(test.id,$event.target)">Click</button>
 </div>
